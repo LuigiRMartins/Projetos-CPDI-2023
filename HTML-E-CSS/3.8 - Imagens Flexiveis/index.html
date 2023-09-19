@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <meta charser = "UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinâmicas, áudio e vídeo</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Aumente e diminua o tamanho do seu navegador e veja como as imagens se comportam.</p>
+
+    <picture>
+        <source media = "(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type = "image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+
+    <audio src="midia/pray.mp3" controls autoplay></audio>
+
+    <audio preload="metadata" controls loop>
+        <source src="midia/pray.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir o áudio. <a href="midia/pray.mp3"> Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    
+    <h3>preload</h3>
+    
+    <p>Indica se o áudio será ou não pré-carregado e aceita 3 valores:
+        <ul>
+            <li>metadata - carrega apenas as informações sobre o arquivo (tamanho, tempo, informações de direitos etc)</li>
+            <li>none - Não vai carregar nada até dar play.</li>
+            <li>auto - padrão caso não colocado nenhum outro valor, carrega o arquivo de audio inteiro assim que a aba for carregada.</li>
+        </ul>
+    </p>
+
+    <h1>Incluindo Vídeos</h1>
+    <h2>Vídeos hospedados localmente</h2>
+
+    <video width="600" poster="imagens/foto-m.png" controls autoplay>
+        <source src="meu-video.mp4" type="video.mp4">
+        <source src="meu-videos.ogv" type="video/ogg">
+        <p>Infelizmente seu navegador não conseguiucarregar o video.</p>
+    </video>
+
+    <h2>Vídeos hospedados externamente</h2>
+    <h3><iframe width="560" height="315" src="https://www.youtube.com/embed/JGfSmMDgadA?si=mCW32c7aHSYB69Ii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></h3>
+
+    <iframe src="https://player.vimeo.com/video/786994169?h=24a7662d29&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/786994169">Justyna Obasi - Breakout Creator of 2022</a> from <a href="https://vimeo.com/justynaobasi">Justyna Obasi</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+</body>
+</html>

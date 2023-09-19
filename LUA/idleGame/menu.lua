@@ -1,0 +1,1 @@
+-- Continuar o JOGO, crédito e configurações básicas.
